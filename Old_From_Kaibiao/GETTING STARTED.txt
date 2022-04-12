@@ -1,0 +1,57 @@
+## Change computer name
+Menu--> Preferences --> Raspberry Pi Configuration
+(change it to something unique to your team or yourself, but still descriptive)
+
+## Log in to UWNet Wifi  
+## do the Network Registration if necessary, e.g. through the Web Browser (top left globe-like icon)
+
+## Set up RealVNC Server with computer name and account. 
+## VNC icon at top -- then Menu --> Licensing 
+## (set it up on your account; make account if necessary)
+##
+## Then establish remote access: 
+##    1) get RealVNC Viewer on your other computer (laptop/desktop)
+##    2) log in to  your account
+##    3) log in to the Raspberry Pi
+##        user: pi
+##        pwd:  raspberry
+
+## Then you should be all set to use it without a monitor/keyboard/mouse. 
+
+VNC Viewer Account:
+	torsobot_uw@g-groups.wisc.edu
+	torsobot_uw
+	
+Name: Weeblebot
+Name in team: Wobblebot
+password: weeblebot
+
+Change resolution: 
+	xrandr -s 1280x720
+
+Folder location:
+	cd weeblebot/
+	cd weeblebot_python/
+	
+Weeblebot control written w/out ROS: under weeblebot_python folder
+Weeblebot control written w/ ROS: under weeblebot folder
+
+SuperUser password
+Weeblebot raspberry pi: weeblebot
+
+To launch weeblebot remote control with tuning slider:
+	sudo su
+	source weeblebot/devel_isolated/setup.bash 
+	roslaunch mobrob weeblebot_remote_controller_with_slider.launch 
+	
+To catkin_make:
+	catkin_make_isolated
+	
+troubleshoot:
+	- if ros cannot find a file under sourced folder, it may possibly be that the files are not yet executable
+	  - one solution is to do this under the whole folder: chmod +x *
+	  - or do this for specific file: chmod +x name.py
+	- 
+
+To shutdown:
+	sudo shutdown -h now

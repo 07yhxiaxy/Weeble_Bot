@@ -1,5 +1,5 @@
 # Weeble_Bot
-Independent Study in UW-Madison focusing on new robotic configuration on top of bi-pedal robots.
+Independent Study in UW-Madison focusing on new robotic configuration based on bi-pedal robots.
 
 Team Members: (Ahphabetic)<br />
 &emsp;Alli Willhite<br />
